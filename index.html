@@ -1,199 +1,307 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Tomas Martino | Desarrollador de Software</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
     <link rel="stylesheet" href="style.css">
-    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"></script>
-    <script defer src="main.js"></script>
-    <title>Document</title>
 </head>
 <body>
-    
+
+    <!-- Hamburger Menu Button -->
+    <div class="hamburger" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <!-- Navigation Overlay -->
+    <div class="nav-overlay" onclick="toggleMenu()"></div>
+
+    <!-- Navigation Menu -->
+    <nav class="nav-menu">
+        <ul class="nav-links">
+            <li onclick="scrollToSection(0)"><i class="fa-solid fa-house"></i><span>Home</span></li>
+            <li onclick="scrollToSection(1)"><i class="fa-solid fa-user"></i><span>Sobre Mí</span></li>
+            <li onclick="scrollToSection(2)"><i class="fa-solid fa-graduation-cap"></i><span>Educación</span></li>
+            <li onclick="scrollToSection(3)"><i class="fa-solid fa-briefcase"></i><span>Experiencia</span></li>
+            <li onclick="scrollToSection(4)"><i class="fa-solid fa-code"></i><span>Habilidades</span></li>
+            <li onclick="scrollToSection(5)"><i class="fa-solid fa-images"></i><span>Proyectos</span></li>
+            <li onclick="scrollToSection(6)"><i class="fa-solid fa-comments"></i><span>Contacto</span></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
     <main>
-        <aside>
-            <ul class="Links">
-                <li onclick="Navigate(0)" class="activeLink"><i class="fa-solid fa-house"></i>
-                    <p>Home</p>
-                </li>
-                <li onclick="Navigate(1)"><i class="fa-solid fa-user" ></i>
-                    <p>About Me</p>
-                </li>
-                <li onclick="Navigate(2)"><i class="fa-solid fa-list"></i>
-                    <p>Services</p>
-                </li>
-                <li onclick="Navigate(3)"><i class="fa-solid fa-images"></i>
-                    <p>Gallery</p>
-                </li>
-                <li onclick="Navigate(4)"><i class="fa-solid fa-comments"></i>
-                    <p>Contact Me</p>
-                </li>
-            </ul>
-        </aside>
-        <div class="swiper mySwiper">
-            <div class="SlideContainer swiper-wrapper">
-                <div class="swiper-slide home-slide">
-                    <div class="HomeContent">
-                        <h1>Hi! I'm <span class="stylized-name">Tomas Martino</span>,</h1>
-                        <h2>A <span class="proffesions">Software Developer</span></h2>
-                        <p class="heroline">¡Hola! Soy Tomás Martino, estudiante de Desarrollo de Software con sólida base en principios de ingeniería y construcción. Me apasiona la programación y he adquirido conocimientos en tecnologías como HTML, CSS, JavaScript, ReactJS y más. Estoy en constante aprendizaje y busco seguir creciendo en el mundo del desarrollo de software.</p>
-                        <div class="buttonGroup"><button onclick="Navigate(1)">About Me</button><button onclick="Navigate(4)">Contact Me</button></div>
-                    </div>
-                    <div class="SideImg">
-                        <div class="top-right-corner">
-                            <hr class="hr1">
-                            <hr class="hr2">
-                        </div>
-                        <img src="./assets/foto perfil.jpeg" alt="">
-                        <div class="bottom-left-corner">
-                            <hr class="hr1">
-                            <hr class="hr2">
-                        </div>
-                    </div>
-                    <p class="slide-help">Scroll for next slide <i class="fa-solid fa-chevron-right fa-shake"></i>
-                    </p>
-                </div>
-                <div class="swiper-slide">
-                    <div class="about-us">
-                    <h1 class="heading">About Me</h1>
-                    <h3 class="sub-heading">I'm Martino Tomas, <span class="proffesions">A Software Developer</span></h3>
-                    <p class="aboutme-deatils">
-                        Desarrollador de software apasionado con experiencia en desarrollo web y bases de datos MySQL. Con una trayectoria en Ingeniería Civil, decidí cambiar de carrera y ahora estoy cursando la Tecnicatura Superior en Desarrollo de Software.
-                        <br>
-                        <b>Habilidades clave:</b> 
-                        <br>
-                        Desarrollo web con HTML, CSS y JavaScript
-                        Frameworks como ReactJS y Bootstrap,
-                        Bases de datos MySQL, Java y Spring Boot
-                        <br><b>Enfoque:</b> <br>
-                        Me enfoco en diseñar soluciones innovadoras que resuelvan problemas reales. Estoy siempre actualizado con las últimas tendencias y tecnologías.
-                        </p>
-                    <div class="about-me-divison">
-                        <div class="about-me-table">
-                            <li><span>Country:</span> Argentina</li>
-                            <li><span>Avability:</span> 24/7 </li>
-                            <li><span>Age</span>:23</li>
-                            <li><span>Phone</span>:(54) 9 2612481242</li>
-                            <li><span>Degree</span>:Desarrollador de software</li>
-                            <li><span>Gender</span>:Man</li>
-                            <li><span>Language Used:</span><img class="img-svg" width="30px" height="30px" src="./assets/html-svgrepo-com.svg" alt=""><img src="./assets/css-3-svgrepo-com.svg" width="30px" height="30px" alt=""><img src="./assets/js-official-svgrepo-com.svg" width="30px" height="30px" alt=""><img src="./assets/java-svgrepo-com.svg" width="30px" height="30px" alt=""><img src="./assets/mysql-svgrepo-com.svg" width="30px" height="30px" alt=""><img src="./assets/spring-boot-svgrepo-com.svg" width="30px" height="30px" alt=""><img src="./assets/reactjs-svgrepo-com.svg" width="30px" height="30px" alt=""><img src="./assets/bootstrap-4-logo-svgrepo-com.svg" width="30px" height="30px" alt=""><img src="./assets/github-142-svgrepo-com.svg" width="30px" height="30px" alt=""> <img src="./assets/figma-svgrepo-com.svg" width="30px" height="30px" alt=""></li>
-                            <div class="buttonGroup"><button onclick="Navigate(2)">Services</button><button onclick="Navigate(4)">Contact Me</button></div>
-                        </div>
 
-                        <div class="skill-bar">
-                            <li>
-                                <p>HTML</p>
-                                <div class="bar">
-                                    <div class="active-bar" style="width:99%"></div>
-                                </div>
-                            </li>
-                            <li>
-                                <p>CSS</p>
-                                <div class="bar">
-                                    <div class="active-bar" style="width:80%"></div>
-                                </div>
-                            </li>
-                            <li>
-                                <p>JavaScript</p>
-                                <div class="bar">
-                                    <div class="active-bar" style="width:85%"></div>
-                                </div>
-                            </li>
-                            <li>
-                                <p>MySQL</p>
-                                <div class="bar">
-                                    <div class="active-bar" style="width:80%"></div>
-                                </div>
-                            </li>
-                            <li>
-                                <p>Java</p>
-                                <div class="bar">
-                                    <div class="active-bar" style="width:60%"></div>
-                                </div>
-                            </li>
-                        </div>
-                    </div>
-                </div></div>
-                <div class="swiper-slide services">
-
-                    <h1 class="heading">Services</h1>
-                    <div class="service">
-                        <div class="service-icon"><i class="fa-solid fa-pen-ruler"></i></div>
-                        <h2>Web Design</h2>
-                        <p></p>
-                    </div>
-                    <div class="service">
-                        <div class="service-icon"><i class="fa-solid fa-globe"></i></div>
-                        <h2>Web Development</h2>
-                        <p></p>
-                    </div>
-                    <div class="service">
-                        <div class="service-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
-                        <h2>SEO Basic</h2>
-                        <p></p>
-                    </div>
-                    <div class="service">
-                        <div class="service-icon"><i class="fa-solid fa-image"></i></div>
-                        <h2>Graphic Designer</h2>
-                        <p></p>
-                    </div>
-                    <div class="service">
-                        <div class="service-icon"><i class="fa-solid fa-mobile-screen-button"></i></div>
-                        <h2>Software Developer</h2>
-                        <p></p>
-                    </div>
-                    <div class="service">
-                        <div class="service-icon"><i class="fa-solid fa-database"></i></div>
-                        <h2>Database Admin</h2>
-                        <p></p>
+        <!-- SECTION 1: HERO -->
+        <section class="section hero" id="section-0">
+            <div class="section-content">
+                <div class="hero-text">
+                    <h1>Hola, soy <span class="stylized-name">Tomás Martino</span></h1>
+                    <h2><span class="proffesions">Desarrollador de Software</span></h2>
+                    <p class="heroline">Técnico recibido en Desarrollo de Software. Durante la pandemia estudié Ingeniería Civil durante dos años, posteriormente reorienté mi carrera hacia el desarrollo de software. Soy una persona autodidacta que le gusta investigar y seguir aprendiendo constantemente.</p>
+                    <div class="buttonGroup">
+                        <button onclick="scrollToSection(1)">Sobre Mí</button>
+                        <button onclick="scrollToSection(6)">Contacto</button>
                     </div>
                 </div>
-                <div class="swiper-slide gallery">
-                    <h1 class="heading">Gallery</h1>
-                    <div class="project"><img src="./assets/gallery/WhatsApp Image 2025-02-20 at 21.38.15.jpeg" alt=""></div>
-                    <div class="project"><img src="./assets/gallery/WhatsApp Image 2025-02-20 at 21.49.27.jpeg" alt=""></div>
-                    <div class="project"><img src="./assets/gallery/image (3).png" alt=""></div>
-                    <div class="project"><img src="./assets/gallery/WhatsApp Image 2025-02-20 at 21.52.47.jpeg" alt=""></div>
-                    <div class="project"><img src="./assets/gallery/WhatsApp Image 2025-02-20 at 21.41.45.jpeg" alt=""></div>
-                    <div class="project"><img src="./assets/gallery/WhatsApp Image 2025-02-20 at 21.57.05.jpeg" alt=""></div>
-                </div>
-                <div class="swiper-slide contactMe">
-                    <h1 class="heading">Contact Me</h1>
-                    <div class="contactinfo"><i class="fa-solid fa-phone"></i>
-                        <h3>Mobile No</h3>
-                        <p>(54) 9 2612481242</p>
-                    </div>
-                    <div class="contactinfo"><i class="fa-solid fa-location-dot"></i>
-                        <h3>Location</h3>
-                        <p>Argentina, Mendoza</p>
-                    </div>
-                    <div class="contactinfo"><i class="fa-regular fa-envelope"></i>
-                        <h3>Email</h3>
-                        <p>tomasdiamante882@gmail.com</p>
-                    </div>
-                    <div class="contactinfo"><i class="fa-solid fa-globe"></i>
-                        <h3>Website</h3>
-                        <p><a href="https://tomasmartino.github.io/TomasMartinoDev/">https://TomasMartinoDev/</a></p>
-                    </div>
-                    <form>
-                        <h2>Send Me A Message <div class="SocialLinks">
-                                <a href="https://github.com/TomasMartino"><i  class="fa-brands fa-github"></i></a>
-                                <a href="https://www.instagram.com/tomas_martino.d/"><i href="https://www.instagram.com/tomasdiamante/" class="fa-brands fa-instagram"></i></a>
-                                <a href="https://www.linkedin.com/in/tomas-martino-34683629b/"><i href="https://www.linkedin.com/in/tomasdiamante/" class="fa-brands fa-linkedin"></i></a>
-                            </div>
-                        </h2>
-                        <input type="text" placeholder="Name">
-                        <input type="text" placeholder="email">
-                        <textarea rows="10" placeholder="Type your Message Here..."></textarea>
-                        <button class="primary">Send</button>
-
-                    </form>
-                    
+                <div class="hero-image">
+                    <img src="./assets/foto perfil.jpeg" alt="Tomás Martino">
                 </div>
             </div>
+        </section>
+
+        <!-- SECTION 2: SOBRE MÍ -->
+        <section class="section" id="section-1">
+            <h1 class="section-title">Sobre Mí</h1>
+            <div class="section-content">
+                <div class="about-text">
+                    <p>
+                        Durante la pandemia, estudié Ingeniería Civil durante dos años, adquiriendo una sólida base en principios de ingeniería y construcción. Posteriormente, decidí reorientar mi carrera hacia el desarrollo de software, y actualmente estoy recibido de la Tecnicatura Superior en Desarrollo de Software.
+                        <br><br>
+                        He estado estudiando programación desde el inicio de la pandemia, lo que me ha permitido adquirir conocimientos en diversas tecnologías. Soy una persona autodidacta, me gusta indagar, investigar y seguir aprendiendo constantemente.
+                        <br><br>
+                        Además de realizar proyectos personales, realicé dos programas de formación adicionales: el programa "The One" para perfeccionar mis habilidades técnicas y profesionales, y un curso de Front-End en CoderHouse que consta de tres módulos: Desarrollo Web (HTML y CSS), JavaScript y ReactJS.
+                    </p>
+                </div>
+                <div class="about-info">
+                    <div class="info-card">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <div>
+                            <span class="info-label">Ubicación</span>
+                            <span class="info-value">Guaymallén, Mendoza, Argentina</span>
+                        </div>
+                    </div>
+                    <div class="info-card">
+                        <i class="fa-solid fa-phone"></i>
+                        <div>
+                            <span class="info-label">Teléfono</span>
+                            <span class="info-value">+54 261 2481242</span>
+                        </div>
+                    </div>
+                    <div class="info-card">
+                        <i class="fa-regular fa-envelope"></i>
+                        <div>
+                            <span class="info-label">Email</span>
+                            <span class="info-value">tomasdiamante882@gmail.com</span>
+                        </div>
+                    </div>
+                    <div class="info-card">
+                        <i class="fa-solid fa-language"></i>
+                        <div>
+                            <span class="info-label">Idiomas</span>
+                            <span class="info-value">Español nativo, Inglés intermedio</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="social-links">
+                    <a href="https://github.com/TomasMartino" target="_blank"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/tomas-martino-34683629b/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://tomasmartino.github.io/TomasMartinoDev/" target="_blank"><i class="fa-solid fa-globe"></i></a>
+                    <a href="https://www.instagram.com/tomas_martino.d/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 3: EDUCACIÓN -->
+        <section class="section" id="section-2">
+            <h1 class="section-title">Educación</h1>
+            <div class="cards-grid">
+                <div class="card">
+                    <div class="card-icon"><i class="fa-solid fa-university"></i></div>
+                    <div class="card-content">
+                        <h3>Universidad Tecnológica Nacional</h3>
+                        <span class="card-subtitle">Ing. Civil</span>
+                        <span class="card-date">Febrero 2020 - Febrero 2022</span>
+                        <p>Mendoza, Argentina</p>
+                        <span class="card-badge completed">Finalizada</span>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-icon"><i class="fa-solid fa-laptop-code"></i></div>
+                    <div class="card-content">
+                        <h3>Instituto Manuel Belgrano</h3>
+                        <span class="card-subtitle">Tecnicatura Superior en Desarrollo de Software</span>
+                        <span class="card-date">2022 - 2025</span>
+                        <p>Mendoza, Argentina</p>
+                        <span class="card-badge completed">Recibido</span>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-icon"><i class="fa-solid fa-language"></i></div>
+                    <div class="card-content">
+                        <h3>Open English</h3>
+                        <span class="card-subtitle">Certificado de Inglés I y II</span>
+                        <p>Inglés intermedio</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-icon"><i class="fa-brands fa-java"></i></div>
+                    <div class="card-content">
+                        <h3>Oracle + Alura Latam</h3>
+                        <span class="card-subtitle">Next Education</span>
+                        <p>Java con Spring Boot y Spring Security</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-icon"><i class="fa-brands fa-react"></i></div>
+                    <div class="card-content">
+                        <h3>CoderHouse</h3>
+                        <span class="card-subtitle">Desarrollador FrontEnd React</span>
+                        <p>HTML, CSS, JavaScript y ReactJS</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                    <div class="card-content">
+                        <h3>The One Program</h3>
+                        <span class="card-subtitle">Programa profesional</span>
+                        <p>Habilidades técnicas y profesionales</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 4: EXPERIENCIA -->
+        <section class="section" id="section-3">
+            <h1 class="section-title">Experiencia</h1>
+            <div class="cards-grid">
+                <a href="https://inncome.net/" target="_blank" class="card experience-card">
+                    <div class="card-header">
+                        <div class="card-icon"><i class="fa-solid fa-mobile-screen"></i></div>
+                        <span class="card-link-icon"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+                    </div>
+                    <div class="card-content">
+                        <h3>Inncome</h3>
+                        <span class="card-role">Full Stack Developer</span>
+                        <span class="card-date">Enero 2025 - Octubre 2025</span>
+                        <span class="card-location">Remoto / Híbrido</span>
+                        <ul class="card-tasks">
+                            <li>App mobile con React Native + Expo Go</li>
+                            <li>Diseños con Figma</li>
+                            <li>API REST para mobile</li>
+                        </ul>
+                        <span class="card-website"> inncome.net</span>
+                    </div>
+                </a>
+                <a href="https://aquiacampamos.com/" target="_blank" class="card experience-card">
+                    <div class="card-header">
+                        <div class="card-icon"><i class="fa-solid fa-campground"></i></div>
+                        <span class="card-link-icon"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+                    </div>
+                    <div class="card-content">
+                        <h3>Aquí Acampamos</h3>
+                        <span class="card-role">Front-End Developer</span>
+                        <span class="card-date">Agosto 2025 - Octubre 2025</span>
+                        <span class="card-location">Híbrido</span>
+                        <ul class="card-tasks">
+                            <li>Web con Next.js y React.js + TypeScript</li>
+                            <li>Integración APIs (Mercado Pago)</li>
+                        </ul>
+                        <span class="card-website"> aquiacampamos.com</span>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!-- SECTION 5: HABILIDADES -->
+        <section class="section" id="section-4">
+            <h1 class="section-title">Habilidades</h1>
+            <div class="skills-grid">
+                <div class="skill-tag"><i class="fa-brands fa-html5"></i><span>HTML</span></div>
+                <div class="skill-tag"><i class="fa-brands fa-css3-alt"></i><span>CSS</span></div>
+                <div class="skill-tag"><i class="fa-brands fa-js"></i><span>JavaScript</span></div>
+                <div class="skill-tag"><i class="fa-brands fa-tailwind"></i><span>Tailwind</span></div>
+                <div class="skill-tag"><i class="fa-brands fa-react"></i><span>ReactJS</span></div>
+                <div class="skill-tag"><i class="fa-solid fa-mobile-screen-button"></i><span>React Native</span></div>
+                <div class="skill-tag"><i class="fa-solid fa-file-code"></i><span>TypeScript</span></div>
+                <div class="skill-tag"><i class="fa-brands fa-node-js"></i><span>Node.js</span></div>
+                <div class="skill-tag"><i class="fa-solid fa-server"></i><span>Express</span></div>
+                <div class="skill-tag"><i class="fa-brands fa-java"></i><span>Java</span></div>
+                <div class="skill-tag"><i class="fa-solid fa-leaf"></i><span>Spring Boot</span></div>
+                <div class="skill-tag"><i class="fa-solid fa-shield-halved"></i><span>Spring Security</span></div>
+                <div class="skill-tag"><i class="fa-solid fa-database"></i><span>MySQL</span></div>
+                <div class="skill-tag"><i class="fa-brands fa-figma"></i><span>Figma</span></div>
+                <div class="skill-tag"><i class="fa-brands fa-bootstrap"></i><span>Bootstrap</span></div>
+                <div class="skill-tag"><i class="fa-brands fa-github"></i><span>GitHub</span></div>
+            </div>
+        </section>
+
+        <!-- SECTION 6: PROYECTOS -->
+        <section class="section" id="section-5">
+            <h1 class="section-title">Proyectos</h1>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <img src="./assets/gallery/WhatsApp Image 2025-02-20 at 21.38.15.jpeg" alt="Proyecto 1">
+                </div>
+                <div class="project-card">
+                    <img src="./assets/gallery/WhatsApp Image 2025-02-20 at 21.49.27.jpeg" alt="Proyecto 2">
+                </div>
+                <div class="project-card">
+                    <img src="./assets/gallery/image (3).png" alt="Proyecto 3">
+                </div>
+                <div class="project-card">
+                    <img src="./assets/gallery/WhatsApp Image 2025-02-20 at 21.52.47.jpeg" alt="Proyecto 4">
+                </div>
+                <div class="project-card">
+                    <img src="./assets/gallery/WhatsApp Image 2025-02-20 at 21.41.45.jpeg" alt="Proyecto 5">
+                </div>
+                <div class="project-card">
+                    <img src="./assets/gallery/WhatsApp Image 2025-02-20 at 21.57.05.jpeg" alt="Proyecto 6">
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 7: CONTACTO -->
+        <section class="section" id="section-6">
+            <h1 class="section-title">Contacto</h1>
+            <div class="section-content">
+                <div class="contact-cards">
+                    <div class="contact-card">
+                        <i class="fa-solid fa-phone"></i>
+                        <span class="contact-label">Teléfono</span>
+                        <span class="contact-value">+54 261 2481242</span>
+                    </div>
+                    <div class="contact-card">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span class="contact-label">Ubicación</span>
+                        <span class="contact-value">Guaymallén, Mendoza</span>
+                    </div>
+                    <div class="contact-card">
+                        <i class="fa-regular fa-envelope"></i>
+                        <span class="contact-label">Email</span>
+                        <span class="contact-value">tomasdiamante882@gmail.com</span>
+                    </div>
+                    <div class="contact-card">
+                        <i class="fa-brands fa-github"></i>
+                        <span class="contact-label">GitHub</span>
+                        <span class="contact-value">github.com/TomasMartino</span>
+                    </div>
+                    <div class="contact-card">
+                        <i class="fa-brands fa-linkedin"></i>
+                        <span class="contact-label">LinkedIn</span>
+                        <span class="contact-value">linkedin.com/in/tomas-martino</span>
+                    </div>
+                    <div class="contact-card">
+                        <i class="fa-solid fa-globe"></i>
+                        <span class="contact-label">Website</span>
+                        <span class="contact-value">tomasmartino.github.io</span>
+                    </div>
+                </div>
+                <form class="contact-form">
+                    <h2>Envíame un Mensaje</h2>
+                    <input type="text" placeholder="Nombre">
+                    <input type="email" placeholder="Email">
+                    <textarea rows="5" placeholder="Tu mensaje..."></textarea>
+                    <button type="submit" class="primary">Enviar</button>
+                </form>
+            </div>
+        </section>
+
     </main>
 
+    <script src="main.js"></script>
 </body>
 </html>
